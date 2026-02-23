@@ -25,6 +25,7 @@ services:
     image: metabase/metabase:latest
     container_name: metabase
     hostname: metabase
+    mem_limit: 1g
     volumes:
       - ./data:/dev/random:ro
     ports:

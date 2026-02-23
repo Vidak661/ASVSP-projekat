@@ -1,0 +1,18 @@
+services:
+  trino:
+    image: trinodb/trino:440
+    container_name: trino
+    mem_limit: 2g
+    ports:
+      - "8089:8080"
+    volumes:
+      - ./etc:/etc/trino
+      - ./catalog:/etc/trino/catalog
+      - ./hadoop-conf/core-site.xml:/etc/hadoop/core-site.xml:ro
+      - ./hadoop-conf/hdfs-site.xml:/etc/hadoop/hdfs-site.xml:ro
+    networks:
+      - asvsp
+
+networks:
+  asvsp:
+    external: true

@@ -179,3 +179,16 @@ logs/
 
 # Output
 output/
+
+# data / dumps / generated
+data/
+datasets/
+tmp/
+logs/
+*.sql
+*.db
+*.parquet
+*.csv
+
+# specific
+metastore_backup.sql

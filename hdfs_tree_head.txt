@@ -1,0 +1,1 @@
+bash: hdfs: command not found
