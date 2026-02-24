@@ -1,0 +1,23 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.8
+    container_name: clickhouse
+    restart: unless-stopped
+    ports:
+      - "8123:8123"   # HTTP
+      - "9001:9000"   # Native
+    networks:
+      - asvsp
+    environment:
+      - CLICKHOUSE_DB=asvsp
+      - CLICKHOUSE_USER=asvsp
+      - CLICKHOUSE_PASSWORD=asvsp
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+
+networks:
+  asvsp:
+    external: true
+
+volumes:
+  clickhouse_data:
