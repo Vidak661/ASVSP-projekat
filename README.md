@@ -12,22 +12,6 @@ Cilj projekta je implementacija savremene arhitekture jezera podataka (Data Lake
 
 ---
 
-## Arhitektura sistema
-
-Dijagram kompletne arhitekture sistema prikazan je na sledećoj slici:
-
-![System Architecture](docs/architecture.png)
-
-Arhitektura obuhvata sledeće slojeve:
-- Izvore podataka (batch i streaming)
-- Ingestion sloj (HDFS, Kafka)
-- Data Lake sa zonama (Raw, Transformed, Curated)
-- Procesne motore (Hive, Spark, Spark Structured Streaming)
-- Orkestraciju (Airflow)
-- Prezentacioni sloj (Metabase)
-
----
-
 ## Skupovi podataka
 
 ### Skup I – Paketni podaci (Batch)
